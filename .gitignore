@@ -1,0 +1,6 @@
+*.webm
+*.pth
+**/__pycache__/
+**/venv/
+**1requirements.txt
+.env

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js" defer></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+        <div id="dashboard">
+            <div id="game-info">
+                <span>Timer: <span id="timer"></span></span>
+                <span>Frame: <span id='frame'></span></span>
+                <div id="replay-indicator" style="display: none;">REPLAY</div>
+            </div>
+            <div id="teams">
+                <div class="team" id="team1">
+                    <h3>Team 1</h3>
+                    <div class="team-stats">
+                        <span class="odds">Odds: <span id="team1_odds"></span>%</span>
+                        <span class="score">Score: <span id="team_1_score"></span></span>
+                    </div>
+                    <ul id="player_info_team1"></ul>
+                </div>
+                
+                <div class="team" id="team2">
+                    <h3>Team 2</h3>
+                    <div class="team-stats">
+                        <span class="odds">Odds: <span id="team2_odds"></span>%</span>
+                        <span class="score">Score: <span id="team_2_score"></span></span>
+                    </div>
+                    <ul id="player_info_team2"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
